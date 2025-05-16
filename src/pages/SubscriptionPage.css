@@ -1,0 +1,620 @@
+.subscription-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.subscription-container {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.subscription-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+.subscription-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Active subscription styles */
+.active-subscription {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.subscription-status {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f0f9f0;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--success-color);
+  flex-wrap: wrap;
+}
+
+.status-icon {
+  font-size: 1.5rem;
+  color: var(--success-color);
+}
+
+.subscription-status h2 {
+  margin: 0;
+  color: var(--success-color);
+  flex: 1;
+  min-width: 200px;
+}
+
+.subscription-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: var(--border-radius);
+}
+
+.subscription-details p {
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.subscription-details p strong {
+  margin-bottom: 0.3rem;
+  color: var(--secondary-color);
+}
+
+.subscription-benefits {
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: var(--border-radius);
+}
+
+.subscription-benefits h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.subscription-benefits ul {
+  padding-left: 1.5rem;
+}
+
+.subscription-benefits li {
+  margin-bottom: 0.5rem;
+}
+
+/* Subscription offer styles */
+.subscription-offer {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+.subscription-plan {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.subscription-plan h2 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.subscription-price {
+  margin: 1.5rem 0;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.period {
+  font-size: 1rem;
+  color: var(--text-color-light);
+}
+
+.subscription-features {
+  text-align: left;
+}
+
+.subscription-features h3 {
+  margin-bottom: 1rem;
+}
+
+.subscription-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.subscription-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.subscription-features li svg {
+  color: var(--success-color);
+}
+
+/* Payment details styles */
+.payment-details {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: var(--border-radius);
+}
+
+.payment-details h2 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.payment-methods {
+  margin-top: 1.5rem;
+}
+
+.payment-method-options {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.payment-method {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 3.5rem; /* Better touch target */
+}
+
+.payment-method.active {
+  border-color: var(--primary-color);
+  background-color: #f0f7ff;
+}
+
+.payment-method.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.payment-method span {
+  font-size: 0.95rem;
+}
+
+.payment-icon {
+  color: var(--primary-color);
+}
+
+.card-details {
+  margin-top: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+  background-color: #f8f9fa;
+  -webkit-appearance: none; /* Removes iOS default styling */
+  appearance: none;
+  height: 3rem; /* Consistent height for touch targets */
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+/* Subscription actions */
+.subscription-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.subscribe-button,
+.renew-button {
+  flex: 2;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.subscribe-button:hover:not(:disabled),
+.renew-button:hover:not(:disabled) {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cancel-button,
+.back-button {
+  flex: 1;
+  padding: 1rem;
+  background-color: var(--white);
+  color: var(--text-color);
+  border: 1px solid #e2e8f0;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.cancel-button:hover:not(:disabled),
+.back-button:hover:not(:disabled) {
+  background-color: #f8f9fa;
+}
+
+.cancel-subscription-button {
+  flex: 1;
+  padding: 1rem;
+  background-color: #fff8f8;
+  color: var(--danger-color);
+  border: 1px solid #ffdddd;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.cancel-subscription-button:hover:not(:disabled) {
+  background-color: #fff0f0;
+  color: var(--danger-dark);
+  border-color: #ffcccc;
+}
+
+/* Cancel dialog styles */
+.cancel-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.cancel-dialog {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: slideUp 0.3s ease-out;
+}
+
+.warning-icon {
+  font-size: 3rem;
+  color: var(--warning-color);
+  margin-bottom: 1rem;
+}
+
+.cancel-dialog h2 {
+  color: var(--danger-color);
+  margin-bottom: 1rem;
+}
+
+.cancel-dialog p {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.dialog-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.confirm-cancel-button {
+  padding: 1rem;
+  background-color: var(--danger-color);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.confirm-cancel-button:hover:not(:disabled) {
+  background-color: var(--danger-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.keep-button {
+  padding: 1rem;
+  background-color: var(--white);
+  color: var(--text-color);
+  border: 1px solid #e2e8f0;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.keep-button:hover:not(:disabled) {
+  background-color: #f8f9fa;
+}
+
+/* Success page styles for cancellation */
+.success-icon.cancellation {
+  color: var(--danger-color);
+}
+
+.subscription-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #f0f7ff;
+  border-radius: var(--border-radius);
+}
+
+.note-icon {
+  color: var(--primary-color);
+  margin-top: 0.2rem;
+}
+
+.subscription-note p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+/* Success page styles */
+.subscription-page.success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  padding: 1rem;
+}
+
+.success-container {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  max-width: 500px;
+  width: 100%;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.success-icon {
+  font-size: 4rem;
+  color: var(--success-color);
+  margin-bottom: 1.5rem;
+  animation: bounceIn 0.8s ease;
+}
+
+.success-container h2 {
+  color: var(--success-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.success-container p {
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Loading and error states */
+.subscription-page.loading,
+.subscription-page.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  font-size: 1.2rem;
+}
+
+.subscription-page.error {
+  color: var(--danger-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .subscription-page {
+    padding: 1rem;
+  }
+
+  .subscription-container {
+    padding: 1.5rem;
+  }
+
+  .subscription-container h1 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .subscription-offer {
+    grid-template-columns: 1fr;
+  }
+
+  .subscription-plan {
+    padding: 1.5rem;
+  }
+
+  .subscription-price .price {
+    font-size: 2rem;
+  }
+
+  .subscription-details {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .subscription-status h2 {
+    font-size: 1.4rem;
+  }
+
+  .subscription-benefits {
+    padding: 1rem;
+  }
+
+  .subscription-actions {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .subscribe-button,
+  .renew-button,
+  .cancel-button,
+  .back-button,
+  .cancel-subscription-button {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+
+  .payment-details {
+    padding: 1.5rem;
+  }
+
+  .payment-method-options {
+    flex-direction: column;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-group input {
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+
+  /* Cancel dialog mobile styles */
+  .cancel-dialog {
+    padding: 1.5rem;
+    width: 95%;
+    max-width: 350px;
+  }
+
+  .cancel-dialog h2 {
+    font-size: 1.4rem;
+  }
+
+  .cancel-dialog p {
+    font-size: 0.95rem;
+  }
+
+  .dialog-actions {
+    gap: 0.8rem;
+  }
+
+  .confirm-cancel-button,
+  .keep-button {
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+
+  /* Success container mobile styles */
+  .success-container {
+    padding: 2rem 1.5rem;
+    width: 90%;
+  }
+
+  .success-icon {
+    font-size: 3rem;
+  }
+
+  .success-container h2 {
+    font-size: 1.5rem;
+  }
+}

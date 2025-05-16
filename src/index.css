@@ -1,13 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap');
+
+/* Modern South African inspired color palette */
+:root {
+  /* Primary palette inspired by South African landscapes */
+  --earth-terracotta: #C75146;     /* Kalahari sand */
+  --earth-ochre: #D7A861;          /* Savanna grass */
+  --earth-olive: #5A6F38;          /* Bushveld foliage */
+  --earth-teal: #2A7F85;           /* Cape coastal waters */
+  --earth-slate: #3F4E65;          /* Drakensberg mountains */
+  --earth-charcoal: #2D3142;       /* Night sky */
+  --earth-cream: #e6e9f5;          /* Karoo limestone */
+  --earth-sand: #E8DBC5;           /* Beach sand */
+
+  /* Application color scheme */
+  --primary-color: var(--earth-teal);      /* Primary brand color */
+  --primary-dark: #1d5a5e;                 /* Darker shade for hover states */
+  --secondary-color: var(--earth-slate);   /* Secondary brand color */
+  --accent-color: var(--earth-ochre);      /* Accent color for highlights */
+  --accent-dark: #b88c45;                  /* Darker accent for hover states */
+  --text-color: #2D3142;                   /* Main text color */
+  --light-text: #5C6378;                   /* Secondary text color */
+  --background-color: #F9F7F3;             /* Subtle off-white background */
+  --card-background: #FFFFFF;              /* Card background */
+  --white: #FFFFFF;                        /* White */
+
+  /* Functional colors */
+  --danger-color: var(--earth-terracotta); /* Error/danger */
+  --danger-dark: #a33f36;                  /* Darker error */
+  --success-color: var(--earth-olive);     /* Success messages */
+  --warning-color: var(--earth-ochre);     /* Warning messages */
+
+  /* UI Elements */
+  --border-radius: 10px;                   /* Rounded corners */
+  --box-shadow: 0 4px 20px rgba(45, 49, 66, 0.08);
+  --transition: all 0.3s ease;
+  --container-width: 1200px;
+  --header-height: 70px;
+  --footer-height: 60px;
+
+  /* Gradient */
+  --gradient-primary: linear-gradient(135deg, var(--earth-teal), var(--earth-olive));
+  --gradient-accent: linear-gradient(135deg, var(--earth-ochre), var(--earth-terracotta));
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  letter-spacing: 0.01em;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Global button styles */
+button {
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Global link styles */
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+/* Global heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--earth-charcoal);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+/* Global container */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  body {
+    font-size: 0.95rem;
+  }
 }

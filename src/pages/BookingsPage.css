@@ -1,0 +1,458 @@
+.bookings-page {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.bookings-container {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.bookings-container h1 {
+  padding: 1.5rem;
+  margin: 0;
+  background: var(--gradient-primary);
+  color: var(--white);
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.bookings-tabs {
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+.tab-button {
+  flex-shrink: 0;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-color);
+  color: var(--white);
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.tab-button:hover {
+  background: var(--primary-dark);
+  transform: scale(1.05);
+}
+
+/* Add smooth scrolling for better UX */
+.bookings-tabs {
+  scroll-behavior: smooth;
+}
+
+.no-bookings {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: var(--light-text);
+}
+
+.bookings-list {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.booking-card {
+  border: 1px solid #e2e8f0;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.booking-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.booking-header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #f8f9fa;
+}
+
+.booking-title h2 {
+  margin: 0 0 0.3rem;
+  font-size: 1.2rem;
+  color: var(--earth-charcoal);
+}
+
+.booking-service {
+  margin: 0;
+  color: var(--earth-teal);
+  font-size: 0.9rem;
+}
+
+.booking-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-icon {
+  font-size: 1.2rem;
+}
+
+.status-icon.confirmed {
+  color: var(--earth-olive);
+}
+
+.status-icon.pending,
+.status-icon.pending-confirmation {
+  color: var(--earth-ochre);
+}
+
+.status-icon.cancelled,
+.status-icon.declined {
+  color: var(--earth-terracotta);
+}
+
+.status-text {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.status-text.confirmed {
+  color: var(--earth-olive);
+}
+
+.status-text.pending,
+.status-text.pending_payment,
+.status-text.pending_confirmation {
+  color: var(--earth-ochre);
+}
+
+.status-text.cancelled,
+.status-text.declined {
+  color: var(--earth-terracotta);
+}
+
+.status-text.cancellation-requested {
+  color: var(--earth-terracotta);
+}
+
+.status-icon.cancellation-requested {
+  color: var(--earth-terracotta);
+}
+
+.booking-details {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 30%;
+}
+
+.detail-icon {
+  color: var(--earth-slate);
+  font-size: 1rem;
+}
+
+.booking-description {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.booking-description p {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.booking-actions {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.action-button {
+  padding: 0.6rem 1rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.action-button.payment {
+  background-color: var(--earth-teal);
+  color: var(--white);
+}
+
+.action-button.payment:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.action-button.view {
+  background-color: transparent;
+  color: var(--earth-slate);
+  border: 1px solid #e2e8f0;
+}
+
+.action-button.view:hover {
+  background-color: #f8f9fa;
+  border-color: var(--earth-slate);
+}
+
+.action-button.cancel {
+  background-color: transparent;
+  color: var(--earth-terracotta);
+  border: 1px solid var(--earth-terracotta);
+}
+
+.action-button.cancel:hover {
+  background-color: #fff8f8;
+}
+
+.cancellation-actions {
+  width: 100%;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+}
+
+.cancellation-message {
+  margin: 0 0 1rem;
+  color: var(--earth-terracotta);
+  font-size: 0.95rem;
+}
+
+.cancellation-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.action-button.accept-cancel {
+  background-color: var(--earth-olive);
+  color: white;
+  flex: 1;
+}
+
+.action-button.accept-cancel:hover {
+  background-color: #6a834a;
+}
+
+.action-button.decline-cancel {
+  background-color: transparent;
+  color: var(--earth-slate);
+  border: 1px solid #e2e8f0;
+  flex: 1;
+}
+
+.action-button.decline-cancel:hover {
+  background-color: #f8f9fa;
+  border-color: var(--earth-slate);
+}
+
+/* Loading and error states */
+.bookings-page.loading,
+.bookings-page.error {
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.bookings-page.error {
+  color: var(--earth-terracotta);
+  border-left: 4px solid var(--earth-terracotta);
+}
+
+/* Cancel Dialog */
+.cancel-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.cancel-dialog {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease-out;
+}
+
+.cancel-dialog-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.warning-icon {
+  font-size: 2rem;
+  color: var(--earth-terracotta);
+}
+
+.cancel-dialog-header h2 {
+  margin: 0;
+  color: var(--earth-terracotta);
+}
+
+.cancel-dialog-content {
+  margin-bottom: 1.5rem;
+}
+
+.cancel-dialog-content p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.cancel-dialog-content .form-group {
+  margin-top: 1.5rem;
+}
+
+.cancel-dialog-content textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--border-radius);
+  resize: vertical;
+  min-height: 80px;
+}
+
+.cancel-dialog-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.action-button.confirm-cancel {
+  background-color: var(--earth-terracotta);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0.8rem;
+  font-weight: 600;
+}
+
+.action-button.confirm-cancel:hover:not(:disabled) {
+  background-color: #b33c32;
+}
+
+.action-button.keep-booking {
+  background-color: transparent;
+  color: var(--earth-slate);
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  padding: 0.8rem;
+  font-weight: 600;
+}
+
+.action-button.keep-booking:hover:not(:disabled) {
+  background-color: #f8f9fa;
+  border-color: var(--earth-slate);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .bookings-page {
+    padding: 1rem 0.5rem;
+  }
+
+  .bookings-container h1 {
+    font-size: 1.5rem;
+    padding: 1.2rem;
+  }
+
+  .tab-button {
+    padding: 0.8rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .booking-details {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .detail {
+    min-width: 100%;
+  }
+
+  .booking-actions {
+    flex-direction: column;
+  }
+
+  .action-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Mobile styles for cancel dialog */
+  .cancel-dialog {
+    padding: 1.5rem;
+    width: 95%;
+    max-width: 350px;
+  }
+
+  .cancel-dialog-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .cancel-dialog-content p {
+    font-size: 0.95rem;
+  }
+
+  .cancel-dialog-content textarea {
+    padding: 0.7rem;
+  }
+}

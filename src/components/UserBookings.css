@@ -1,0 +1,47 @@
+.user-bookings {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bookings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.status-pending {
+  color: #f39c12;
+}
+
+.status-confirmed {
+  color: #27ae60;
+}
+
+.status-cancelled {
+  color: #e74c3c;
+}
+
+/* Styling for the search bar */
+.search-bar {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+  outline: none;
+}

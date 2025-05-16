@@ -1,0 +1,137 @@
+.review-form-container {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  box-shadow: var(--box-shadow);
+}
+
+.review-form-container h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--earth-charcoal);
+  font-size: 1.3rem;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rating-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rating-container p {
+  margin: 0;
+  color: var(--earth-slate);
+  font-weight: 500;
+}
+
+.star-rating {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.star-rating input[type="radio"] {
+  display: none;
+}
+
+.star {
+  cursor: pointer;
+  transition: color 200ms;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  color: var(--earth-slate);
+  font-weight: 500;
+}
+
+.form-group textarea {
+  padding: 0.8rem;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--border-radius);
+  resize: vertical;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--earth-teal);
+}
+
+.error-message {
+  color: var(--earth-terracotta);
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  background-color: rgba(178, 98, 81, 0.1);
+  border-radius: var(--border-radius);
+}
+
+.success-message {
+  color: var(--earth-olive);
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  background-color: rgba(121, 146, 85, 0.1);
+  border-radius: var(--border-radius);
+}
+
+.submit-button {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--earth-teal);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  align-self: flex-end;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.submit-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.review-success,
+.review-notice {
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.review-success {
+  background-color: rgba(121, 146, 85, 0.1);
+  color: var(--earth-olive);
+}
+
+.review-notice {
+  background-color: rgba(93, 109, 126, 0.1);
+  color: var(--earth-slate);
+}
+
+@media (max-width: 768px) {
+  .review-form-container {
+    padding: 1rem;
+  }
+  
+  .submit-button {
+    width: 100%;
+  }
+}

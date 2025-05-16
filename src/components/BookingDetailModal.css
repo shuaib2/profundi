@@ -1,0 +1,341 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: var(--border-radius);
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+.modal-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 10;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: var(--earth-charcoal);
+  font-size: 1.5rem;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--earth-slate);
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: var(--transition);
+}
+
+.close-button:hover {
+  color: var(--earth-terracotta);
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.booking-id {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.booking-id-label {
+  font-weight: 600;
+  color: var(--earth-slate);
+}
+
+.booking-id-value {
+  font-family: monospace;
+  background-color: #f8f9fa;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.booking-status {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.pending {
+  background-color: rgba(217, 164, 65, 0.1);
+  color: var(--earth-ochre);
+}
+
+.status-badge.confirmed {
+  background-color: rgba(65, 145, 145, 0.1);
+  color: var(--earth-teal);
+}
+
+.status-badge.completed {
+  background-color: rgba(121, 146, 85, 0.1);
+  color: var(--earth-olive);
+}
+
+.status-badge.cancelled {
+  background-color: rgba(178, 98, 81, 0.1);
+  color: var(--earth-terracotta);
+}
+
+.cancellation-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background-color: rgba(178, 98, 81, 0.1);
+  color: var(--earth-terracotta);
+}
+
+.booking-section {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.booking-section h3 {
+  margin: 0 0 1.5rem;
+  color: var(--earth-charcoal);
+  font-size: 1.2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.booking-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--earth-teal);
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.detail-icon {
+  color: var(--earth-teal);
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+}
+
+.detail-content {
+  flex: 1;
+}
+
+.detail-label {
+  margin: 0 0 0.3rem;
+  color: var(--earth-slate);
+  font-size: 0.9rem;
+}
+
+.detail-value {
+  margin: 0;
+  color: var(--earth-charcoal);
+  font-weight: 500;
+}
+
+.contact-instructions {
+  display: inline-block;
+  background-color: #f8f9fa;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: 1px dashed #ccc;
+  color: #6c757d;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+
+.booking-notes, .booking-description {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--earth-teal);
+  margin: 0;
+  color: var(--earth-charcoal);
+  line-height: 1.5;
+  white-space: pre-line; /* Preserves line breaks in the description */
+}
+
+.booking-actions {
+  margin-top: 2rem;
+}
+
+.cancellation-info {
+  background-color: rgba(178, 98, 81, 0.1);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--earth-terracotta);
+  margin-bottom: 1.5rem;
+  color: var(--earth-charcoal);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.action-button {
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--border-radius);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  flex: 1;
+}
+
+.action-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.action-button.approve {
+  background-color: var(--earth-olive);
+  color: var(--white);
+}
+
+.action-button.approve:hover:not(:disabled) {
+  background-color: #6a834a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-button.reject, .action-button.cancel {
+  background-color: var(--earth-terracotta);
+  color: var(--white);
+}
+
+.action-button.reject:hover:not(:disabled), .action-button.cancel:hover:not(:disabled) {
+  background-color: #a25a4d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-button.confirm {
+  background-color: var(--earth-teal);
+  color: var(--white);
+}
+
+.action-button.confirm:hover:not(:disabled) {
+  background-color: #2a7d7d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-button.complete {
+  background-color: var(--earth-olive);
+  color: var(--white);
+}
+
+.action-button.complete:hover:not(:disabled) {
+  background-color: #6a834a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+  padding: 0.8rem 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.message.success {
+  background-color: rgba(121, 146, 85, 0.1);
+  color: var(--earth-olive);
+  border-left: 4px solid var(--earth-olive);
+}
+
+.message.error {
+  background-color: rgba(178, 98, 81, 0.1);
+  color: var(--earth-terracotta);
+  border-left: 4px solid var(--earth-terracotta);
+}
+
+.message.info {
+  background-color: rgba(65, 145, 145, 0.1);
+  color: var(--earth-teal);
+  border-left: 4px solid var(--earth-teal);
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .booking-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+}

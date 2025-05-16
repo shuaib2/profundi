@@ -1,0 +1,172 @@
+.availability-settings {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.availability-settings h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--earth-charcoal);
+}
+
+.weekly-schedule {
+  margin-bottom: 2rem;
+}
+
+.weekly-schedule h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--earth-charcoal);
+}
+
+.schedule-info {
+  color: var(--earth-slate);
+  margin-bottom: 1.5rem;
+}
+
+.days-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.day-schedule {
+  border: 1px solid #e2e8f0;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.day-schedule:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.day-header {
+  margin-bottom: 1rem;
+}
+
+.day-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+/* Ensure checkboxes in availability settings are visible */
+.day-label input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.day-name {
+  font-weight: 600;
+  color: var(--earth-charcoal);
+}
+
+.time-inputs {
+  display: flex;
+  gap: 1rem;
+}
+
+.time-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.time-field label {
+  font-size: 0.9rem;
+  color: var(--earth-slate);
+}
+
+.time-field input {
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--border-radius);
+  font-family: inherit;
+}
+
+.appointment-settings {
+  margin-bottom: 2rem;
+}
+
+.appointment-settings h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--earth-charcoal);
+}
+
+.setting-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.setting-field label {
+  font-weight: 500;
+  color: var(--earth-charcoal);
+}
+
+.setting-field select {
+  padding: 0.8rem;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--border-radius);
+  background-color: var(--white);
+  font-family: inherit;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.save-button {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--earth-teal);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.save-button:hover:not(:disabled) {
+  background-color: #2a7d7d;
+  transform: translateY(-2px);
+}
+
+.save-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background-color: rgba(178, 98, 81, 0.1);
+  color: var(--earth-terracotta);
+  padding: 0.8rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+.success-message {
+  background-color: rgba(121, 146, 85, 0.1);
+  color: var(--earth-olive);
+  padding: 0.8rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .days-container {
+    grid-template-columns: 1fr;
+  }
+
+  .time-inputs {
+    flex-direction: column;
+  }
+}

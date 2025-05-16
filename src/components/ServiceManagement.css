@@ -1,0 +1,195 @@
+.service-management {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.service-management-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.service-management-header h2 {
+  margin: 0;
+  color: var(--earth-charcoal);
+}
+
+.add-service-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background-color: var(--earth-teal);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-service-button:hover {
+  background-color: #2a7d7d;
+  transform: translateY(-2px);
+}
+
+.no-services {
+  text-align: center;
+  padding: 3rem 0;
+  color: var(--earth-slate);
+}
+
+.add-first-service-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--earth-teal);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin: 1.5rem auto 0;
+}
+
+.add-first-service-button:hover {
+  background-color: #2a7d7d;
+  transform: translateY(-2px);
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  border: 1px solid #e2e8f0;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.service-header h3 {
+  margin: 0;
+  color: var(--earth-charcoal);
+}
+
+.service-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-button,
+.delete-button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.edit-button {
+  color: var(--earth-teal);
+}
+
+.edit-button:hover {
+  background-color: rgba(65, 145, 145, 0.1);
+}
+
+.delete-button {
+  color: var(--earth-terracotta);
+}
+
+.delete-button:hover {
+  background-color: rgba(178, 98, 81, 0.1);
+}
+
+.service-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--earth-charcoal);
+  margin-bottom: 1rem;
+}
+
+.service-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.service-duration,
+.service-category {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  color: var(--earth-slate);
+}
+
+.service-description {
+  color: var(--earth-charcoal);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.service-tag {
+  padding: 0.2rem 0.5rem;
+  background-color: rgba(93, 109, 126, 0.1);
+  color: var(--earth-slate);
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.error-message {
+  background-color: rgba(178, 98, 81, 0.1);
+  color: var(--earth-terracotta);
+  padding: 0.8rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .services-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-management-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .add-service-button {
+    width: 100%;
+    justify-content: center;
+  }
+}

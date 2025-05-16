@@ -1,0 +1,344 @@
+/* These variables are now in index.css */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: none;
+  z-index: 1000;
+  height: 70px;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  box-shadow: var(--box-shadow);
+  height: 65px;
+  background-color: rgba(255, 255, 255, 0.98);
+}
+
+.navbar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right,
+    var(--earth-teal),
+    var(--earth-olive),
+    var(--earth-ochre),
+    var(--earth-terracotta));
+  opacity: 0.3;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--earth-charcoal);
+  text-decoration: none;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-family: 'Lora', serif;
+  letter-spacing: -0.02em;
+}
+
+.brand-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232A7F85' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: relative;
+}
+
+.brand-text {
+  background: linear-gradient(135deg, var(--earth-teal), var(--earth-slate));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.navbar-brand:hover {
+  transform: translateY(-1px);
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+
+.nav-elements {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-tab {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.nav-icon {
+  font-size: 1.1rem;
+  color: var(--earth-slate);
+  transition: var(--transition);
+}
+
+.nav-tab:hover {
+  color: var(--primary-color);
+}
+
+.nav-tab:hover .nav-icon {
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.nav-tab.active {
+  color: var(--primary-color);
+  font-weight: 600;
+  position: relative;
+}
+
+.nav-tab.active .nav-icon {
+  color: var(--primary-color);
+}
+
+.nav-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.auth-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.nav-link:hover .nav-icon {
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.register-link {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  transition: var(--transition);
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(42, 127, 133, 0.2);
+}
+
+.register-link:hover {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(42, 127, 133, 0.3);
+}
+
+.user-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-email {
+  color: var(--light-text);
+  font-weight: 500;
+}
+
+.logout-button {
+  padding: 0.5rem 1.2rem;
+  background-color: var(--earth-terracotta);
+  color: var(--white);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(199, 81, 70, 0.2);
+}
+
+.logout-button:hover {
+  background-color: var(--danger-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(199, 81, 70, 0.3);
+}
+
+/* Responsive styles */
+/* Notification styles */
+.user-controls {
+  position: relative;
+}
+
+.notification-bell-container {
+  position: relative;
+  margin-right: 1rem;
+}
+
+.notification-bell {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+}
+
+.notification-bell:hover {
+  color: var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 60px;
+  }
+
+  .navbar-container {
+    padding: 0 1rem;
+  }
+
+  .menu-icon {
+    display: block;
+    z-index: 10;
+  }
+
+  .nav-elements {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 80%;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 80px;
+    transition: var(--transition);
+    overflow-y: auto;
+  }
+
+  .nav-elements.active {
+    right: 0;
+  }
+
+  .nav-tabs {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .nav-tab {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .auth-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .user-controls {
+    flex-direction: column;
+    width: 100%;
+  }
+
+
+
+  .user-email {
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .logout-button {
+    width: 100%;
+  }
+}
+

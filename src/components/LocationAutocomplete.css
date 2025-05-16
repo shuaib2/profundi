@@ -1,0 +1,165 @@
+.location-autocomplete {
+  position: relative;
+  width: 100%;
+  z-index: 100; /* Ensure dropdown appears above other elements */
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.location-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%232A7F85' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z'%3E%3C/path%3E%3Ccircle cx='12' cy='10' r='3'%3E%3C/circle%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.2rem;
+  padding-right: 2.5rem;
+}
+
+.location-input:focus {
+  outline: none;
+  border-color: var(--primary-color, #007a4d);
+  box-shadow: 0 0 0 3px rgba(0, 122, 77, 0.2);
+  background-color: #fff;
+}
+
+.api-error .location-input {
+  border-color: #f0ad4e; /* Use a warning color instead of error */
+  background-image: none; /* Remove the location icon when there's an error */
+}
+
+.api-error-indicator {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  color: #f0ad4e; /* Use a warning color */
+  font-size: 1.2rem;
+  cursor: help;
+}
+
+/* Style for fallback suggestions */
+.suggestions-list.fallback {
+  border-top: 2px solid #f0ad4e;
+  background-color: #fffbf0;
+}
+
+.suggestion-item.fallback {
+  color: #333;
+}
+
+.suggestion-item.fallback small {
+  color: #888;
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+/* Invalid selection styles */
+.invalid-selection .location-input {
+  border-color: #dc3545;
+  background-color: #fff8f8;
+}
+
+.invalid-selection-indicator {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  color: #dc3545;
+  font-size: 1.2rem;
+  cursor: help;
+}
+
+/* Add a message below the input when invalid */
+.invalid-selection::after {
+  content: "Please select a location from the suggestions";
+  display: block;
+  position: absolute;
+  bottom: -1.5rem;
+  left: 0;
+  font-size: 0.75rem;
+  color: #dc3545;
+}
+
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Higher z-index to ensure it appears above other elements */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.suggestion-item {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%232A7F85' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z'%3E%3C/path%3E%3Ccircle cx='12' cy='10' r='3'%3E%3C/circle%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f7ff;
+}
+
+.location-loading {
+  position: absolute;
+  top: 50%;
+  right: 2.5rem;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  color: var(--earth-slate, #64748b);
+  display: flex;
+  align-items: center;
+}
+
+.location-loading:before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(42, 127, 133, 0.3);
+  border-top: 2px solid var(--primary-color, #007a4d);
+  border-radius: 50%;
+  margin-right: 5px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
